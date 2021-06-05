@@ -1,0 +1,502 @@
+* {box-sizing: border-box}
+.wrapper {
+  width: 1200px;
+  margin: auto;
+}
+li {
+  list-style-type: none;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/SFPro/SFProDisplay-Regular.eot");
+  src: url("../fonts/SFPro/SFProDisplay-Semibold.eot");
+}
+header.header {
+  background: #FA8C16;
+
+  .header-content {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1.Logo a {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .header-navigation {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      margin-left: 58px;
+
+      .nav-header {
+        a {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 22px;
+          color: #FAFAFA;
+          text-decoration: none;
+        }
+      }
+
+      .nav-header:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    .search-box {
+      .search {
+        padding: 5px 12px;
+        min-height: 32px;
+        min-width: 195px;
+        border: none;
+        border-radius: 7px;
+        background-image: url("../img/header/search.png") ;
+        background-repeat: no-repeat;
+        background-position: top 8px right 12px;
+        background-size: 16px 16px;
+
+        &::placeholder {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 22px;
+          display: flex;
+          align-items: center;
+          color: #BFBFBF;
+        }
+      }
+    }
+  }
+}
+
+section.section-content {
+  background: #E5E5E5;
+  padding-top: 30px;
+  .content {
+    min-height: 1281px;
+    background: #E5E5E5;
+    display: flex;
+    justify-content: space-between;
+
+    .posts {
+      max-width: 800px;
+
+      .post {
+        background: #fff;
+        border: 1px solid #E8E8E8;
+        margin-bottom: 30px;
+
+        .post-content {
+          background: #fff;
+          padding: 35px 36px 0 36px;
+
+          .post-content-title {
+            margin-top: 0;
+            margin-bottom: 19px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #262626;
+          }
+          .description {
+            font-size: 14px;
+            line-height: 22px;
+            vertical-align: top;
+            color: #262626;
+            margin-bottom: 20px;
+          }
+          .post-content-tags {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-bottom: 22px;
+
+            .post-content-tag {
+
+              &:not(:last-child) {
+                margin-right: 10px;
+              }
+
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 22px;
+              color: #BFBFBF;
+            }
+          }
+        }
+
+        .post-footer {
+          max-height: 66px;
+          margin-top: 0;
+          padding: 21px 36px;
+          background: #E8E8E8;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .post-buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            a.post-btn {
+              &:not(:last-child) {
+                margin-right: 29px;
+              }
+            }
+          }
+
+          .post-author {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            .post-author-info {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              margin-right: 9px;
+
+              .post-author-name {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 20px;
+                text-align: right;
+                color: #BFBFBF;
+              }
+              .post-author-time {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 20px;
+                text-align: right;
+                color: #BFBFBF;
+              }
+            }
+          }
+        }
+      }
+
+      .new-post {
+        max-width: 800px;
+
+        div input::placeholder {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 22px;
+          color: #595959;
+        }
+        div input[placeholder="Заголовок поста"] {
+          border: none;
+          border-radius: 8px;
+          min-height: 70px;
+          min-width: 800px;
+          padding-top: 23px;
+          padding-bottom: 23px;
+          padding-left: 31px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: #000000;
+          margin-bottom: 16px;
+
+          &:active, &:hover, &:visited {
+            border: none;
+            outline: 0;
+            outline-offset: 0;
+          }
+
+        }
+        div textarea[placeholder="Текст вашего поста"] {
+          border: none;
+          border-radius: 8px;
+          min-height: 362px;
+          min-width: 800px;
+          padding-left: 31px;
+          padding-top: 23px;
+          text-align: left;
+          resize: none;
+
+          &:active, &:hover, &:visited {
+            border: none;
+            outline: 0;
+            outline-offset: 0;
+          }
+        }
+        div.sidebar-button {
+          background: #FAAD14 url("../img/section-content/sidebar/fire.png") no-repeat top 17px left 16px;
+          width: 370px;
+          margin-bottom: 20px;
+          border-radius: 8px;
+          padding: 13px 16px 13px 36px;
+          color: white;
+          border: none;
+          max-height: 50px;
+          display: flex;
+          align-items: center;
+
+          .sidebar-btn {
+            width: 318px;
+            background: #FAAD14;
+            color: white;
+            border: none;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+        div.buttons {
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+
+          a.div-button-1 {
+            background: white url("../img/section-content/posts/video-camera.png") no-repeat top 17px left 16px;
+            height: 50px;
+            margin: 0 10px 20px 35px;
+            border: 1px solid orange;
+            width: 125px;
+
+            .video-button {
+              //padding: 13px 16px 13px 36px;
+              margin: 0;
+              padding-top: 13px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: center;
+              color: orange;
+              align-items: center;
+            }
+          }
+          a.div-button-2 {
+            background: white url("../img/section-content/posts/picture.png") no-repeat top 17px left 16px;
+            height: 50px;
+            margin: 0 0 20px 0;
+            border: 1px solid orange;
+            width: 125px;
+
+            .camera-button {
+              margin: 0;
+              padding-top: 13px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: center;
+              color: orange;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+
+    .sidebar {
+      width: 370px;
+      .sidebar-menu {
+        background: white;
+        margin-bottom: 20px;
+
+        .sidebar-menu-header {
+          background: #E8E8E8;
+          border: 1px solid #E8E8E8;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          position: relative;
+
+          .sidebar-menu-header-user {
+            display: flex;
+            align-items: center;
+            padding: 10px 74px 10px 25px;
+
+            & img {
+              margin-right: 17px;
+            }
+
+            & p {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+              color: #595959;
+            }
+          }
+
+          a img.sidebar-menu-icon {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+          }
+
+          a img.sidebar-menu-active {
+            position: absolute;
+            display: none;
+            top: 25px;
+            right: 25px;
+          }
+        }
+        .sidebar-menu-list {
+          display: none;
+          padding: 0;
+          margin: 0;
+          li {
+            padding: 16px 16px 16px 48px;
+            max-height: 54px;
+
+            a {
+              color: #000;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 22px;
+            }
+
+            &:hover {
+              border-right: 3px solid yellow;
+              background: #FFFBE6;
+              a {
+                color: yellow;
+              }
+            }
+          }
+        }
+      }
+
+      .sidebar-button {
+        background: #FAAD14 url("../img/section-content/sidebar/fire.png") no-repeat top 17px left 16px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        padding: 13px 16px 13px 36px;
+        color: white;
+        border: none;
+        max-height: 50px;
+        display: flex;
+        align-items: center;
+
+
+        .sidebar-btn {
+          width: 318px;
+          background: #FAAD14;
+          color: white;
+          border: none;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      .sidebar-comment {
+        max-width: 370px;
+        background: white;
+
+        .sidebar-comment-header {
+          background: #E8E8E8;
+          border: 1px solid #E8E8E8;
+          max-height: 70px;
+
+          h3.sidebar-comment-header-title {
+            padding-left: 25px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #595959;
+          }
+        }
+
+        .sidebar-comment-frame {
+          padding: 22px 40px 30px 25px;
+
+          .sidebar-comment-frame-title {
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #D48806;
+          }
+
+          .sidebar-comment-frame-description {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            color: #262626;
+          }
+        }
+      }
+
+      .sidebar-ads {
+        width: 370px;
+        position: relative;
+        margin: 20px 0 0 0;
+
+        &:hover {
+          &::before {
+            text-align: center;
+            color:white;
+            position: absolute;
+            content: "Реклама";
+            width: 99px;
+            height: 21px;
+            background: #C4C4C4;
+            display: block;
+            top: 0;
+            right: 0;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+footer.footer {
+  background: #06063e;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer-text {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
